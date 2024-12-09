@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Book Lover's Haven Logo">
+    </div>
+    <nav>
+        <ul id="nav-menu" class="hidden">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="interactive.html">Interactive Page</a></li>
+          <li><a href="genres.html">Genres</a></li>
+          <li><a href="recommendations.html">Recommendations</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+    </nav>
+  </header>
+  <main>
+    <h1>Interactive Section</h1>
+    <p id="book-of-the-day">Click the button to reveal the Book of the Day!</p>
+    <button id="reveal-button">Reveal</button>
+  </main>
+  <footer>
+    <p>&copy; 2024 Book Lover's Haven. All rights reserved.</p>
+  </footer>
+  <script>
+    const button = document.getElementById('reveal-button');
+    const bookOfTheDay = document.getElementById('book-of-the-day');
+    button.addEventListener('click', () => {
+      bookOfTheDay.textContent = "Today's Book: 'The Great Gatsby' by F. Scott Fitzgerald";
+      bookOfTheDay.style.backgroundColor = '#ffd700';
+    });
+  </script>
+</body>
+</html>
